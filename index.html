@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBS Autoservicio | Especialistas en Electrónica Automotriz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0D47A1;
+            --secondary: #E53935;
+            --accent: #FFC107;
+            --dark: #161B22;
+            --light: #F5F5F5;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        /* Header */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 1rem;
+        }
+        /* Navegación */
+        nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        /* Servicios */
+        .servicios-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .servicio-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .servicio-card:hover {
+            transform: translateY(-10px);
+        }
+        .servicio-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .servicio-content {
+            padding: 1.5rem;
+        }
+        .servicio-content h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .servicio-content ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: var(--secondary);
+        }
+        /* Contacto */
+        .contacto-banner {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin: 3rem 0;
+        }
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            .nav-links {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="logo-jbs.jfif" alt="JBS Autoservicio" class="logo">
+        <h1>JBS Autoservicio</h1>
+        <p>Tecnología y seguridad para tu vehículo</p>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <div class="nav-container">
+            <div class="brand">
+                <span style="color: var(--accent); font-weight: bold;">ELECTRÓNICA AUTOMOTRIZ</span>
+            </div>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+                <a href="https://wa.me/593991364216" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Servicios -->
+    <section id="servicios" class="servicios-section">
+        <h2 style="text-align: center; margin-bottom: 1.5rem; color: var(--primary);">Nuestros Servicios Especializados</h2>
+        
+        <div class="servicios-grid">
+            <!-- Servicio 1 -->
+            <div class="servicio-card">
+                <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Sistema eléctrico" class="servicio-img">
+                <div class="servicio-content">
+                    <h3>Sistema Electrónico</h3>
+                    <ul>
+                        <li>Vidrios eléctricos</li>
+                        <li>Bloqueo central</li>
+                        <li>Cableado automotriz</li>
+                        <li>Computadora automotriz</li>
+                    </ul>
+                    <a href="https://jbsautoservicio.github.io/servicios/electronica" class="btn">Ver detalles</a>
+                </div>
+            </div>
+            
+            <!-- Servicio 2 -->
+            <div class="servicio-card">
+                <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Componentes" class="servicio-img">
+                <div class="servicio-content">
+                    <h3>Componentes Eléctricos</h3>
+                    <ul>
+                        <li>Alternadores</li>
+                        <li>Arranques</li>
+                        <li>Bombas de combustible</li>
+                        <li>Sensores (O2, ABS, etc.)</li>
+                    </ul>
+                    <a href="https://jbsautoservicio.github.io/servicios/componentes" class="btn">Ver detalles</a>
+                </div>
+            </div>
+            
+            <!-- Servicio 3 -->
+            <div class="servicio-card">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Seguridad" class="servicio-img">
+                <div class="servicio-content">
+                    <h3>Seguridad y Audio</h3>
+                    <ul>
+                        <li>Sistemas GPS</li>
+                        <li>Alarmas vehiculares</li>
+                        <li>Radios multimedia</li>
+                        <li>Cámaras de reversa</li>
+                    </ul>
+                    <a href="https://jbsautoservicio.github.io/servicios/seguridad" class="btn">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de contacto -->
+    <section class="contacto-banner">
+        <h2>¿Necesitas asesoría especializada?</h2>
+        <p style="margin: 1rem 0 2rem;">Contáctanos para una evaluación sin costo</p>
+        <a href="https://wa.me/593991364216" class="btn" style="background: var(--accent); color: #333;"><i class="fab fa-whatsapp"></i> Contactar por WhatsApp</a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <h3>JBS Autoservicio</h3>
+        <p>Especialistas en electrónica automotriz</p>
+        
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61576233142151" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/jbsautoservicio/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@jbsautoservicio1" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/593991364216"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        
+        <p><i class="fas fa-phone"></i> 099 136 4216</p>
+        <p><i class="fas fa-map-marker-alt"></i> Av. de la Prensa N5190Y, Arajuno 170104</p>
+        
+        <div style="margin-top: 2rem;">
+            <p>&copy; 2023 JBS Autoservicio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/593991364216" style="position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
